@@ -349,15 +349,35 @@ personal GitHub account.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
 </div>
+<p>Whoops!</p>
+<p>We noticed that they are changes in the original repository. Let us
+define it as <code>upstream</code>:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">git</span> remote add upstream git@github.com:thaarres/qcd_school_ml.git</span></code></pre>
+</div>
+<p>Now you can pull the changes to the local repository:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">git</span> pull upstream main</span></code></pre>
+</div>
+<p>and push them to your remote GitHub repository with</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre>
+</div>
 </section><section id="check-the-container"><h2 class="section-heading">Check the container<a class="anchor" aria-label="anchor" href="#check-the-container"></a>
 </h2>
 <hr class="half-width"><p>Open the <code>my_python</code> container and check that you see the
 code repository:</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">docker</span> start <span class="at">-i</span> my_python</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">ls</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">docker</span> start <span class="at">-i</span> my_python</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="fu">ls</span></span></code></pre>
 </div>
 <p>The code should be visible under <code>qcd_school_ml</code>.</p>
 </section><section id="about-the-file-list"><h2 class="section-heading">About the file list<a class="anchor" aria-label="anchor" href="#about-the-file-list"></a>
@@ -366,11 +386,11 @@ code repository:</p>
 tutorial can be downloaded with the <code>cernopendata-client</code> as
 explained in the <a href="https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-dataset-scouting/04-cli-through-cernopendata-client.html#get-dataset-information" class="external-link">Dataset
 scounting tutorial</a></p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-i</span> <span class="at">-t</span> <span class="at">--rm</span> docker.io/cernopendata/cernopendata-client  get-file-locations <span class="at">--recid</span> 63168 <span class="at">--protocol</span> xrootd </span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-i</span> <span class="at">-t</span> <span class="at">--rm</span> docker.io/cernopendata/cernopendata-client  get-file-locations <span class="at">--recid</span> 33703 <span class="at">--protocol</span> xrootd</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-i</span> <span class="at">-t</span> <span class="at">--rm</span> docker.io/cernopendata/cernopendata-client  get-file-locations <span class="at">--recid</span> 63168 <span class="at">--protocol</span> xrootd </span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-i</span> <span class="at">-t</span> <span class="at">--rm</span> docker.io/cernopendata/cernopendata-client  get-file-locations <span class="at">--recid</span> 33703 <span class="at">--protocol</span> xrootd</span></code></pre>
 </div>
 <p>A subset of them is already in the notebook, but this is how you
 would get them.</p>
