@@ -57,7 +57,18 @@ Push the code to your new repository with
 git push -u origin main
 ```
 
-## Get the file names
+## Check the container
+
+Open the `my_python` container and check that you see the code repository:
+
+```bash
+docker start -i my_python
+ls
+```
+
+The code should be visible under `qcd_school_ml`.
+
+## About the file list
 
 Take note the file names of the CMS open data files used in the tutorial can be downloaded with the `cernopendata-client` as explained in the [Dataset scounting tutorial](https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-dataset-scouting/04-cli-through-cernopendata-client.html#get-dataset-information)
 
