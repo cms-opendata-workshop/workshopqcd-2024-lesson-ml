@@ -199,6 +199,7 @@
       <div class="accordion-body">
         <ul><li><a href="#docker-containers">Docker containers</a></li>
 <li><a href="#get-the-code">Get the code</a></li>
+<li><a href="#get-the-file-names">Get the file names</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -296,12 +297,13 @@ instructions in the Docker tutorial, the working directory in
 <p>Add this code to your personal GitHub account.</p>
 <p>In the GitHub Web UI, create a new repository as instructed in the <a href="https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-git/04-exercises.html#upload-an-existing-local-repository-to-github" class="external-link">Git
 tutorial</a>.</p>
-<p>Go to your GitHub area (<a href="https://github.com/%5Byourgithubname%5D" class="external-link uri">https://github.com/[yourgithubname]</a>), choose the
+<p>Go to your GitHub area
+(<code>https://github.com/[yourgithubname]</code>), choose the
 “Repositories” tab and click on New.</p>
 <p>Choose <code>qcd_school_ml</code> as the repository name, choose
 Public and leave other options as they are. This will create the
 repository and generate an instruction page.</p>
-<p>On the reminal, check the remote:</p>
+<p>On the terminal, check the remote:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -332,7 +334,32 @@ personal GitHub account.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre>
 </div>
+</section><section id="get-the-file-names"><h2 class="section-heading">Get the file names<a class="anchor" aria-label="anchor" href="#get-the-file-names"></a>
+</h2>
+<hr class="half-width"><p>Take note the file names of the CMS open data files used in the
+tutorial can be downloaded with the <code>cernopendata-client</code> as
+explained in the <a href="https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-dataset-scouting/04-cli-through-cernopendata-client.html#get-dataset-information" class="external-link">Dataset
+scounting tutorial</a></p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-i</span> <span class="at">-t</span> <span class="at">--rm</span> docker.io/cernopendata/cernopendata-client  get-file-locations <span class="at">--recid</span> 63168 <span class="at">--protocol</span> xrootd </span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-i</span> <span class="at">-t</span> <span class="at">--rm</span> docker.io/cernopendata/cernopendata-client  get-file-locations <span class="at">--recid</span> 33703 <span class="at">--protocol</span> xrootd</span></code></pre>
+</div>
+<p>A subset of them is already in the notebook, but this is how you
+would get them.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
+<div class="callout-content">
 <p>That’s it, you are ready to (machine) learn!</p>
+</div>
+</div>
+</div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
