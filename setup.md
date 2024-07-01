@@ -57,6 +57,26 @@ Push the code to your new repository with
 git push -u origin main
 ```
 
+Whoops!
+
+We noticed that they are changes in the original repository. Let us define it as `upstream`:
+
+```bash
+git remote add upstream git@github.com:thaarres/qcd_school_ml.git
+```
+
+Now you can pull the changes to the local repository:
+
+```bash
+git pull upstream main
+```
+
+and push them to your remote GitHub repository with
+
+```bash
+git push origin main
+```
+
 ## Check the container
 
 Open the `my_python` container and check that you see the code repository:
