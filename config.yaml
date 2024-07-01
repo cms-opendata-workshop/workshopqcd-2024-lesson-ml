@@ -61,7 +61,7 @@ contact: 'cms-dpoa-coordinators@cern.ch' # FIXME
 
 # Order of episodes in your lesson
 episodes: 
-#- 01-introduction.md
+- 01-introduction.md
 
 
 # Information for Learners
