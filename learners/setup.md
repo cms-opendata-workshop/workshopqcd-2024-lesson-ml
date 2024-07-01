@@ -24,11 +24,11 @@ Add this code to your personal GitHub account.
 
 In the GitHub Web UI, create a new repository as instructed in the [Git tutorial](https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-git/04-exercises.html#upload-an-existing-local-repository-to-github).
 
-Go to your GitHub area (https://github.com/[yourgithubname]), choose the “Repositories” tab and click on New.
+Go to your GitHub area (`https://github.com/[yourgithubname]`), choose the "Repositories" tab and click on New.
 
 Choose `qcd_school_ml` as the repository name, choose Public and leave other options as they are. This will create the repository and generate an instruction page.
 
-On the reminal, check the remote:
+On the terminal, check the remote:
 
 ```bash
 git remote -v
@@ -57,5 +57,19 @@ Push the code to your new repository with
 git push -u origin main
 ```
 
+## Get the file names
+
+Take note the file names of the CMS open data files used in the tutorial can be downloaded with the `cernopendata-client` as explained in the [Dataset scounting tutorial](https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-dataset-scouting/04-cli-through-cernopendata-client.html#get-dataset-information)
+
+```bash
+docker run -i -t --rm docker.io/cernopendata/cernopendata-client  get-file-locations --recid 63168 --protocol xrootd 
+docker run -i -t --rm docker.io/cernopendata/cernopendata-client  get-file-locations --recid 33703 --protocol xrootd
+```
+
+A subset of them is already in the notebook, but this is how you would get them.
+
+::::::::::::::::::::::::::::::::::::::: callout
+
 That's it, you are ready to (machine) learn!
 
+:::::::::::::::::::::::::::::::::::::::
