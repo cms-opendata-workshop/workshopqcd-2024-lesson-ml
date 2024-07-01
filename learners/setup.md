@@ -59,7 +59,7 @@ git push -u origin main
 
 Whoops!
 
-We noticed that they are changes in the original repository. Let us define it as `upstream`:
+We noticed that there are changes in the original repository. Let us define it as `upstream`:
 
 ```bash
 git remote add upstream git@github.com:thaarres/qcd_school_ml.git
